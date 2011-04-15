@@ -1,0 +1,52 @@
+<?php
+/*
+Plugin Name: Batch Manager Prefilters
+Version: auto
+Description: Add some prefilters in Batch Manager.
+Plugin URI: auto
+Author: P@t
+Author URI: http://www.gauchon.com
+*/
+
+if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+
+add_event_handler('get_batch_manager_prefilters', 'add_bmp');
+add_event_handler('perform_batch_manager_prefilters', 'perform_bmp', 50, 2);
+
+function add_bmp($prefilters)
+{
+  load_language('plugin.lang', dirname(__FILE__).'/');
+
+  array_push($prefilters,
+    array('ID' => 'with tags', 'NAME' => l10n('with tags')),
+    array('ID' => 'with HD', 'NAME' => l10n('with HD')),
+    array('ID' => 'without HD', 'NAME' => l10n('without HD'))
+  );
+
+  return $prefilters;
+}
+
+function perform_bmp($filter_sets, $prefilter)
+{
+  if ('with tags' == $prefilter)
+  {
+    $query = 'SELECT DISTINCT image_id FROM '.IMAGE_TAG_TABLE.';';
+    array_push($filter_sets, array_from_query($query, 'image_id'));
+  }
+
+  if ('with HD' == $prefilter)
+  {
+    $query = 'SELECT id FROM '.IMAGES_TABLE.' WHERE has_high IS NOT NULL;';
+    array_push($filter_sets, array_from_query($query, 'id'));
+  }
+
+  if ('without HD' == $prefilter)
+  {
+    $query = 'SELECT id FROM '.IMAGES_TABLE.' WHERE has_high IS NULL;';
+    array_push($filter_sets, array_from_query($query, 'id'));
+  }
+
+  return $filter_sets;
+}
+
+?>
