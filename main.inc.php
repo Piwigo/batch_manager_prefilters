@@ -20,8 +20,6 @@ function add_bmp($prefilters)
 
   array_push($prefilters,
     array('ID' => 'with tags', 'NAME' => l10n('with tags')),
-    array('ID' => 'with HD', 'NAME' => l10n('with HD')),
-    array('ID' => 'without HD', 'NAME' => l10n('without HD')),
     array('ID' => 'with author', 'NAME' => l10n('with author')),
     array('ID' => 'without author', 'NAME' => l10n('without author'))
   );
@@ -35,18 +33,6 @@ function perform_bmp($filter_sets, $prefilter)
   {
     $query = 'SELECT DISTINCT image_id FROM '.IMAGE_TAG_TABLE.';';
     array_push($filter_sets, array_from_query($query, 'image_id'));
-  }
-
-  if ('with HD' == $prefilter)
-  {
-    $query = 'SELECT id FROM '.IMAGES_TABLE.' WHERE has_high IS NOT NULL;';
-    array_push($filter_sets, array_from_query($query, 'id'));
-  }
-
-  if ('without HD' == $prefilter)
-  {
-    $query = 'SELECT id FROM '.IMAGES_TABLE.' WHERE has_high IS NULL;';
-    array_push($filter_sets, array_from_query($query, 'id'));
   }
 
   if ('with author' == $prefilter)
