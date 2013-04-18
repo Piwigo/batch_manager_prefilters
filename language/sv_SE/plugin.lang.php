@@ -1,5 +1,5 @@
 <?php
 $lang['with tags'] = 'med taggar';
-$lang['with author'] = 'med författare';
-$lang['without author'] = 'utan författare';
+$lang['with author'] = 'med fÃ¶rfattare';
+$lang['without author'] = 'utan fÃ¶rfattare';
 ?>
