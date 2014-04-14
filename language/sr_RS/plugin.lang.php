@@ -20,6 +20,6 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['with author'] = 'аутор';
-$lang['with tags'] = 'ознаке';
-$lang['without author'] = 'није аутор';
+$lang['with author'] = 'са аутором';
+$lang['with tags'] = 'са ознаком';
+$lang['without author'] = 'без аутора';
