@@ -18,10 +18,13 @@ function add_bmp($prefilters)
 {
   load_language('plugin.lang', dirname(__FILE__).'/');
 
-  array_push($prefilters,
+  array_push(
+    $prefilters,
     array('ID' => 'with tags', 'NAME' => l10n('with tags')),
     array('ID' => 'with author', 'NAME' => l10n('with author')),
-    array('ID' => 'without author', 'NAME' => l10n('without author'))
+    array('ID' => 'without author', 'NAME' => l10n('without author')),
+    array('ID' => 'no_title', 'NAME' => l10n('With no title')),
+    array('ID' => 'no_date_creation', 'NAME' => l10n('With no creation date'))
   );
 
   return $prefilters;
@@ -47,6 +50,18 @@ function perform_bmp($filter_sets, $prefilter)
     array_push($filter_sets, array_from_query($query, 'id'));
   }
 
+  if ('no_title' == $prefilter)
+  {
+    $query = 'SELECT id FROM '.IMAGES_TABLE.' WHERE name IS NULL OR name = \'\';';
+    array_push($filter_sets, array_from_query($query, 'id'));
+  }
+
+  if ('no_date_creation' == $prefilter)
+  {
+    $query = 'SELECT id FROM '.IMAGES_TABLE.' WHERE date_creation IS NULL;';
+    array_push($filter_sets, array_from_query($query, 'id'));
+  }
+  
   return $filter_sets;
 }
 
