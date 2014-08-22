@@ -67,8 +67,12 @@ function perform_bmp($filter_sets, $prefilter)
 
 function element_set_global_action_bmp($action)
 {
+  echo __FUNCTION__.'::'.$action.'<br>';
   if ((@$_SESSION['bulk_manager_filter']['prefilter'] == 'with tags' and in_array($action, array('add_tags', 'del_tags')))
-    or (in_array(@$_SESSION['bulk_manager_filter']['prefilter'], array('with author', 'without author')) and $action == 'author'))
+    or (in_array(@$_SESSION['bulk_manager_filter']['prefilter'], array('with author', 'without author')) and $action == 'author')
+      or (in_array(@$_SESSION['bulk_manager_filter']['prefilter'], array('no_date_creation')) and $action == 'date_creation')
+      or (in_array(@$_SESSION['bulk_manager_filter']['prefilter'], array('no_title')) and $action == 'title')
+    )
   {
     // let's refresh the page because we the current set might be modified
     redirect(get_root_url().'admin.php?page='.$_GET['page']);
