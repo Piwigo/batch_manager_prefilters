@@ -23,4 +23,5 @@
 $lang['without author'] = 'χωρίς δημιουργό';
 $lang['with tags'] = 'με ετικέττες ';
 $lang['with author'] = 'με δημιουργό';
-?>
+$lang['With no creation date'] = 'Χωρίς ημερομηνία δημιουργίας';
+$lang['With no title'] = 'Χωρίς τίτλο';
