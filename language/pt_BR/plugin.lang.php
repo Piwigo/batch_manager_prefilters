@@ -23,4 +23,5 @@
 $lang['with author'] = 'com o autor';
 $lang['with tags'] = 'com etiquetas';
 $lang['without author'] = 'sem o autor';
-?>
+$lang['With no creation date'] = 'Sem data de criação';
+$lang['With no title'] = 'Sem título';
