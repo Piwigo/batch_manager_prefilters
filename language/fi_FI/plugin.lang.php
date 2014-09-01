@@ -23,4 +23,5 @@
 $lang['with author'] = 'tekijöineen';
 $lang['with tags'] = 'tägeineen';
 $lang['without author'] = 'ilman tekijää';
-?>
+$lang['With no creation date'] = 'Ei luomispäivämäärää';
+$lang['With no title'] = 'Ei otsikkoa';
