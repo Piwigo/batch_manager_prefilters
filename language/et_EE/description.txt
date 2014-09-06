@@ -1,1 +1,1 @@
-Lisab mõned eelfiltrit pakett-töötluses.
+Lisab mõned eelfiltrid pakett-töötluses.

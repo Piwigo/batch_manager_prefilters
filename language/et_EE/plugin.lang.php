@@ -23,4 +23,5 @@
 $lang['with author'] = 'autoriga';
 $lang['with tags'] = 'tagidega';
 $lang['without author'] = 'autorita';
-?>
+$lang['With no creation date'] = 'loomise kuupäev puudub';
+$lang['With no title'] = 'pealkiri (tiitel) puudub';
