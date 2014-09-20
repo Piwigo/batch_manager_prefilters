@@ -23,4 +23,5 @@
 $lang['with author'] = 'З автором';
 $lang['with tags'] = 'З тегами';
 $lang['without author'] = 'Без автора';
-?>
+$lang['With no creation date'] = 'За відсутності дати створення';
+$lang['With no title'] = 'За відсутності назви';
