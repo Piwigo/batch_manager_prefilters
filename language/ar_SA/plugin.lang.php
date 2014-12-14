@@ -23,4 +23,5 @@
 $lang['with author'] = 'مع المؤلف';
 $lang['with tags'] = 'مع الكلمات الدليلية';
 $lang['without author'] = 'بدون مؤلف';
-?>
+$lang['With no creation date'] = 'مع لا تاريخ الإنشاء';
+$lang['With no title'] = 'من  غير عنوان';
