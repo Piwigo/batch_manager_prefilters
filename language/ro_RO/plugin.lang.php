@@ -23,4 +23,5 @@
 $lang['with author'] = 'cu autor';
 $lang['with tags'] = 'cu etichete';
 $lang['without author'] = 'fără autor';
-?>
+$lang['With no creation date'] = 'Fără data creării';
+$lang['With no title'] = 'Fără titlu';
