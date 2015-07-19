@@ -23,4 +23,5 @@
 $lang['with author'] = 'su autorium';
 $lang['with tags'] = 'su žymomis';
 $lang['without author'] = 'be autoriaus';
-?>
+$lang['With no creation date'] = 'Be sukūrimo datos';
+$lang['With no title'] = 'Be pavadinimo';
