@@ -23,4 +23,5 @@
 $lang['with author'] = '含作者';
 $lang['with tags'] = '含標籤';
 $lang['without author'] = '不含作者';
-?>
+$lang['With no creation date'] = '沒有創建日期';
+$lang['With no title'] = '沒有標題';
