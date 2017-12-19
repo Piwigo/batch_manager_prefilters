@@ -21,6 +21,7 @@ function add_bmp($prefilters)
   array_push(
     $prefilters,
     array('ID' => 'only_one_album', 'NAME' => l10n('in only one album')),
+    array('ID' => 'in_several_albums', 'NAME' => l10n('in several albums')),
     array('ID' => 'with tags', 'NAME' => l10n('with tags')),
     array('ID' => 'with author', 'NAME' => l10n('with author')),
     array('ID' => 'without author', 'NAME' => l10n('without author')),
@@ -69,6 +70,12 @@ function perform_bmp($filter_sets, $prefilter)
     array_push($filter_sets, array_from_query($query, 'image_id'));
   }
 
+  if ('in_several_albums' == $prefilter)
+  {
+    $query = 'SELECT image_id FROM '.IMAGE_CATEGORY_TABLE.' GROUP BY image_id HAVING COUNT(category_id) > 1;';
+    array_push($filter_sets, array_from_query($query, 'image_id'));
+  }
+
   return $filter_sets;
 }
 
@@ -79,6 +86,7 @@ function element_set_global_action_bmp($action)
       or (in_array(@$_SESSION['bulk_manager_filter']['prefilter'], array('no_date_creation')) and $action == 'date_creation')
       or (in_array(@$_SESSION['bulk_manager_filter']['prefilter'], array('no_title')) and $action == 'title')
       or (@$_SESSION['bulk_manager_filter']['prefilter'] == 'only_one_album' and in_array($action, array('associate', 'move', 'dissociate')))
+      or (@$_SESSION['bulk_manager_filter']['prefilter'] == 'in_several_albums' and in_array($action, array('associate', 'move', 'dissociate')))
     )
   {
     // let's refresh the page because we the current set might be modified
