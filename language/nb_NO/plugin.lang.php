@@ -25,3 +25,5 @@ $lang['With no title'] = 'Med ingen tittel';
 $lang['with author'] = 'med forfatter';
 $lang['with tags'] = 'med tags';
 $lang['without author'] = 'uten forfatter';
+$lang['in only one album'] = 'tilknyttet kun en album';
+$lang['in several albums'] = 'tilknyttet flere albumer';
