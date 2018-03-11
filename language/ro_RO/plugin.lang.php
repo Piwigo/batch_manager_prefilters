@@ -25,3 +25,5 @@ $lang['with tags'] = 'cu etichete';
 $lang['without author'] = 'fără autor';
 $lang['With no creation date'] = 'Fără data creării';
 $lang['With no title'] = 'Fără titlu';
+$lang['in only one album'] = 'asociat cu un singur album';
+$lang['in several albums'] = 'asociat cu cateva albume';
