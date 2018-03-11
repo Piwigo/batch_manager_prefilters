@@ -25,3 +25,5 @@ $lang['with tags'] = 'etiketlerle';
 $lang['without author'] = 'yazar olmadan';
 $lang['With no creation date'] = 'Yaratma tarihi olmadan';
 $lang['With no title'] = 'Başlıksız olarak';
+$lang['in only one album'] = 'Sadece bir albüm ile ilişkilendirilmiş';
+$lang['in several albums'] = 'Birden fazla albüm ile ilişkilendirilmiş';
