@@ -25,3 +25,5 @@ $lang['with tags'] = 'З тегами';
 $lang['without author'] = 'Без автора';
 $lang['With no creation date'] = 'За відсутності дати створення';
 $lang['With no title'] = 'За відсутності назви';
+$lang['in only one album'] = 'пов\'язаний лише з одним альбомом';
+$lang['in several albums'] = 'пов\'язані з кількома альбомами';
