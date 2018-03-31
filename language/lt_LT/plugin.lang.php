@@ -25,3 +25,5 @@ $lang['with tags'] = 'su žymomis';
 $lang['without author'] = 'be autoriaus';
 $lang['With no creation date'] = 'Be sukūrimo datos';
 $lang['With no title'] = 'Be pavadinimo';
+$lang['in several albums'] = 'sujsijęs su keliais albumais';
+$lang['in only one album'] = 'susijęs tik su vienu albumu';
