@@ -26,7 +26,8 @@ function add_bmp($prefilters)
     array('ID' => 'with author', 'NAME' => l10n('with author')),
     array('ID' => 'without author', 'NAME' => l10n('without author')),
     array('ID' => 'no_title', 'NAME' => l10n('With no title')),
-    array('ID' => 'no_date_creation', 'NAME' => l10n('With no creation date'))
+    array('ID' => 'no_date_creation', 'NAME' => l10n('With no creation date')),
+    array('ID' => 'no_md5sum', 'NAME' => l10n('Without md5sum'))
   );
 
   return $prefilters;
@@ -74,6 +75,12 @@ function perform_bmp($filter_sets, $prefilter)
   {
     $query = 'SELECT image_id FROM '.IMAGE_CATEGORY_TABLE.' GROUP BY image_id HAVING COUNT(category_id) > 1;';
     array_push($filter_sets, array_from_query($query, 'image_id'));
+  }
+
+  if ('no_md5sum' == $prefilter)
+  {
+    $query = 'SELECT id FROM '.IMAGES_TABLE.' WHERE md5sum IS NULL;';
+    array_push($filter_sets, array_from_query($query, 'id'));
   }
 
   return $filter_sets;
