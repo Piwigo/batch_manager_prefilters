@@ -25,3 +25,5 @@ $lang['with tags'] = 'Com etiquetas';
 $lang['without author'] = 'Sem autor';
 $lang['With no creation date'] = 'Sem data de feitura';
 $lang['With no title'] = 'Sem título';
+$lang['in only one album'] = 'Associado apenas a um album';
+$lang['in several albums'] = 'Associado a vários albuns';
