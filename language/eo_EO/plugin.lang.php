@@ -25,3 +25,5 @@ $lang['with tags'] = 'kun etikedoj';
 $lang['without author'] = 'sen aŭtoro';
 $lang['With no creation date'] = 'Sen kreodato';
 $lang['With no title'] = 'Sen titolo';
+$lang['in only one album'] = 'ligita al nur unu albumo';
+$lang['in several albums'] = 'ligita al pluraj albulmoj';
