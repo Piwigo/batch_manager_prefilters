@@ -20,8 +20,10 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['with author'] = '与作者';
-$lang['with tags'] = '与标签';
+$lang['with author'] = '包含作者';
+$lang['with tags'] = '包含标签';
 $lang['without author'] = '没有作者';
 $lang['With no creation date'] = '没有创建日期';
 $lang['With no title'] = '没有标题';
+$lang['in only one album'] = '关联到单个相册';
+$lang['in several albums'] = '关联到多个相册';
