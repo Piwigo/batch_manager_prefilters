@@ -23,4 +23,7 @@
 $lang['with author'] = 'van szerzője';
 $lang['with tags'] = 'vannak címkéi';
 $lang['without author'] = 'szerző nélküli';
-?>
+$lang['With no creation date'] = 'Készítés dátuma nélkül';
+$lang['With no title'] = 'Cím nélkül';
+$lang['in only one album'] = 'Csak egy albumhoz rendelve';
+$lang['in several albums'] = 'Több albumhoz rendelve';
