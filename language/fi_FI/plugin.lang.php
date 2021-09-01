@@ -25,3 +25,5 @@ $lang['with tags'] = 'tägeineen';
 $lang['without author'] = 'ilman tekijää';
 $lang['With no creation date'] = 'Ei luomispäivämäärää';
 $lang['With no title'] = 'Ei otsikkoa';
+$lang['in only one album'] = 'liitä vain yhteen albumiin';
+$lang['in several albums'] = 'liitä useaan albumiin';
