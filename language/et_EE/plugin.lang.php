@@ -25,3 +25,5 @@ $lang['with tags'] = 'tagidega';
 $lang['without author'] = 'autorita';
 $lang['With no creation date'] = 'loomise kuupäev puudub';
 $lang['With no title'] = 'pealkiri (tiitel) puudub';
+$lang['in only one album'] = 'seotud ainult ühe albumiga';
+$lang['in several albums'] = 'seotud mitme albumiga';
